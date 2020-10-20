@@ -6,7 +6,7 @@ namespace MBaske
     // Curvature (y-rot) is random (perlin noise with random offset).
     public class RoadModulator
     {
-        private readonly Vector2 scale = new Vector2(50f, 100f);
+        private readonly Vector2 scale = new Vector2(50f, 50f);
         private readonly Vector2 strength = new Vector2(0.05f, 2f);
         private readonly Vector2 offset;
 
@@ -19,7 +19,7 @@ namespace MBaske
         {
             return Quaternion.Euler(
                 Mathf.Cos(frameIndex / scale.x) * strength.x,
-                Noise(offset.x, offset.y + frameIndex / scale.x) * strength.y,
+                Noise(offset.x, offset.y + frameIndex / scale.y) * strength.y,
                 0);
         }
 
