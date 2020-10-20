@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Barrel
+  - Pole
+  - Barrier
+  - Cone
+  - Road
+  - Waypoint
   layers:
   - Default
   - TransparentFX
