@@ -104,7 +104,7 @@ namespace MBaske
             stats.speed = Vector3.Dot(frame.Forward, vehicle.Rigidbody.velocity);
             stats.steer = vehicle.Steering.CrntNormValue;
             stats.offset = frame.LocalPosition(pos).x;
-            stats.orientation = Vector3.SignedAngle(frame.Forward, fwd, Vector3.up);
+            stats.orientation = Vector3.SignedAngle(frame.Forward, fwd, frame.Up);
             stats.collisions = vehicle.CollisionCount;
             vehicle.CollisionCount = 0;
 
