@@ -130,28 +130,6 @@ namespace MBaske
             }
         }
 
-        // Used for heuristic:
-        // Demo has obstacles on only one side of the road.
-        public bool HasObstacles(int range, out float side)
-        {
-            for (int i = 0; i < obstacleIndices.Length; i++)
-            {
-                if (obstacleIndices[i].Count > 0)
-                {
-                    int distanceToClosest = obstacleIndices[i].Peek() - agentFrameIndex;
-
-                    if (distanceToClosest < range)
-                    {
-                        side = i < Chunk.MaxObstacles / 2 ? -1f : 1f;
-                        return true;
-                    }
-                }
-            }
-
-            side = 0;
-            return false;
-        }
-
         private void ClearObstacles()
         {
             if (obstacleIndices == null)
