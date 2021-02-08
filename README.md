@@ -1,3 +1,3 @@
 ## Simple Driver
 
-A basic endless driver made with [Unity Machine Learning Agents](https://github.com/Unity-Technologies/ml-agents).
+The project has been updated and moved to [https://github.com/mbaske/grid-sensor](https://github.com/mbaske/grid-sensor), where you can find it in the Examples folder.
